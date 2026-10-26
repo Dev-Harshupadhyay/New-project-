@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+  Harsh Upadhyay — portfolio
+  ------------------------------------------------------------
+  A static site: no build step, no framework, no CDN.
+  Styles: css/style.css   Scripts: js/main.js
+  Content lives in PRODUCT.md, the visual system in DESIGN.md.
+
+  Reading order of this file:
+    <head>      metadata, social cards, favicon
+    header      fixed bar: wordmark + section nav
+    main
+      .hero       name, availability, portrait, stack ledger
+      #work       01 — three project rows with live screenshots
+      #about      02 — the story + skills columns
+      #credentials 03 — certifications
+      #contact    04 — email, form link, facts
+    footer      colophon
+  ============================================================
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Harsh Upadhyay — Full-Stack Web Developer</title>
+<meta name="description" content="Harsh Upadhyay is a self-taught full-stack web developer in Faridabad, India. React, Node, Express and MongoDB. Three apps built, deployed and live.">
+<meta name="theme-color" content="#E7E8EA">
+<link rel="canonical" href="https://pmharshuu.netlify.app/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Harsh Upadhyay — Full-Stack Web Developer">
+<meta property="og:description" content="Self-taught full-stack developer. React, Node, Express, MongoDB. Three apps shipped, deployed and clickable.">
+<meta property="og:image" content="assets/projects/cinevood.webp">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23E7E8EA'/%3E%3Crect x='7' y='7' width='18' height='18' fill='%23D2202B'/%3E%3C/svg%3E">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip" href="#work">Skip to the work</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<header class="site-head" id="siteHead">
+  <div class="wrap head__inner">
+    <a class="mark" href="#top" aria-label="Harsh Upadhyay — back to top">
+      <span class="mark__dot" aria-hidden="true"></span> Harsh Upadhyay
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#credentials">Credentials</a>
+      <a class="nav__cta" href="mailto:harsh48227@gmail.com">Email me</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ======================================================
+       HERO
+       Left: name, status, one-paragraph pitch, two actions.
+       Right: portrait, framed like a proof print.
+       Below: the stack ledger (static — deliberately not a
+       auto-scrolling ticker).
+       ====================================================== -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap">
+
+      <div class="hero__meta intro" style="--d:60ms">
+        <p class="label">Portfolio <span aria-hidden="true">/</span> 2026</p>
+        <p class="label">Faridabad, Haryana, IN</p>
+      </div>
+
+      <div class="hero__grid">
+        <div>
+          <h1 class="hero__title intro" id="hero-title" style="--d:120ms">
+            Harsh <span class="mark-line">Upadhyay</span><span class="dot" aria-hidden="true">.</span>
+          </h1>
+
+          <p class="hero__role intro" style="--d:220ms">
+            <span class="hero__status">
+              <span class="pip" aria-hidden="true"></span>
+              Open to internships &amp; freelance
+            </span>
+            <span class="label">Full-stack developer</span>
+          </p>
+
+          <p class="hero__lead intro" style="--d:300ms">
+            I build the whole thing: the interface in React, the API in Node and Express,
+            the data in MongoDB. <strong>Three apps shipped and live.</strong>
+            I'm in my first semester of a BCA, and I was building long before it started.
+          </p>
+
+          <div class="hero__actions intro" style="--d:380ms">
+            <a class="btn btn--solid" href="#work">
+              See the work
+              <svg class="btn__arrow" width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/>
+              </svg>
+            </a>
+            <span class="copy-email">
+              <a class="btn btn--ghost" href="mailto:harsh48227@gmail.com" id="copyBtn">
+                harsh48227@gmail.com
+                <svg class="btn__arrow" width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <rect x="5" y="5" width="8" height="8" stroke="currentColor" stroke-width="1.4"/>
+                  <path d="M11 5V3H3v8h2" stroke="currentColor" stroke-width="1.4" fill="none"/>
+                </svg>
+              </a>
+              <span class="copy-email__note" id="copyNote" role="status" aria-live="polite">Click to copy</span>
+            </span>
+          </div>
+        </div>
+
+        <figure class="portrait intro" style="--d:260ms">
+          <div class="portrait__frame">
+            <img src="assets/profile.webp" width="760" height="950"
+                 alt="Harsh Upadhyay in a white shirt and headphones, against a red backdrop">
+            <span class="portrait__tag">Harsh Upadhyay</span>
+          </div>
+          <figcaption>
+            <span>Self-portrait</span>
+            <span>28.4°N 77.3°E</span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <!-- stack ledger: static, no auto-scrolling -->
+    <div class="wrap">
+      <div class="ledger">
+        <ul aria-label="Technologies I work with">
+          <li>React</li>
+          <li>Node.js</li>
+          <li>Express</li>
+          <li>MongoDB</li>
+          <li>MySQL</li>
+          <li>Tailwind CSS</li>
+          <li>TypeScript</li>
+          <li>Next.js</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       WORK — the reason the page exists.
+       Each <article class="project"> is one row:
+         .project__index   machine label in the left margin
+         .project__title   live link to the deployed app
+         .project__desc    what it is, in plain language
+         .project__stack   chips
+         .project__aside   "what's inside" (hidden under 700px,
+                           because the lead paragraph already says it)
+         .project__figure  the real screenshot, uncropped
+       ====================================================== -->
+  <section class="sec" id="work" aria-labelledby="work-title">
+    <div class="wrap">
+      <div class="sec__head reveal">
+        <p class="label"><span class="label__num">01</span> Selected work</p>
+        <h2 class="sec__title" id="work-title">Three things I built, deployed and clickable.</h2>
+        <p class="sec__note">Every screenshot is the live app. Open one and click around.</p>
+      </div>
+
+      <div class="work">
+
+        <!-- 01 Cinevood -->
+        <article class="project reveal">
+          <div class="project__head">
+            <p class="project__index">01 / Web app</p>
+            <div>
+              <h3 class="project__title">
+                <a href="https://cinenvood.onrender.com/" target="_blank" rel="noopener">
+                  Cinevood <span class="up" aria-hidden="true">↗</span>
+                </a>
+              </h3>
+              <p class="project__desc" style="margin-top:1rem">
+                A movie discovery app for the moment you don't know what to watch.
+                Trending titles, genre filters, a “Surprise me” button, and detail views with
+                ratings and overviews, all fed by a live movie API.
+              </p>
+              <ul class="project__stack" aria-label="Tech stack">
+                <li class="chip">React</li>
+                <li class="chip">Node.js</li>
+                <li class="chip">Express</li>
+                <li class="chip">REST API</li>
+              </ul>
+              <a class="project__link" href="https://cinenvood.onrender.com/" target="_blank" rel="noopener">
+                Explore the live app
+                <svg width="11" height="11" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M4 12L12 4M6 4h6v6" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/>
+                </svg>
+              </a>
+            </div>
+            <div class="project__aside">
+              <p class="label" style="margin-bottom:.6rem">What's inside</p>
+              <p class="project__desc">
+                Search, trending and genre browsing, plus a random-titles button that turns
+                decision fatigue into one click. Built to stay quick on a phone.
+              </p>
+            </div>
+          </div>
+          <figure class="project__figure">
+            <img src="assets/projects/cinevood.webp" width="1200" height="407" loading="lazy" decoding="async"
+                 alt="Cinevood home screen: a trending row of movie posters with ratings, genre filters and a Surprise Me button">
+          </figure>
+          <p class="project__caption">
+            <span>Fig. 01 / Trending, filtered by mood</span>
+            <span>React · Node · Express</span>
+          </p>
+        </article>
+
+        <!-- 02 Tarazu -->
+        <article class="project reveal">
+          <div class="project__head">
+            <p class="project__index">02 / Utility</p>
+            <div>
+              <h3 class="project__title">
+                <a href="https://tarzau.netlify.app/" target="_blank" rel="noopener">
+                  Tarazu <span class="up" aria-hidden="true">↗</span>
+                </a>
+              </h3>
+              <p class="project__desc" style="margin-top:1rem">
+                Named after the Hindi word for a weighing scale. A toolkit for Indian shopkeepers:
+                price-to-weight conversion, an EMI planner, a SIP tracker and more. Free, no signup,
+                and it keeps working offline.
+              </p>
+              <ul class="project__stack" aria-label="Tech stack">
+                <li class="chip">React</li>
+                <li class="chip">JavaScript</li>
+                <li class="chip">Tailwind CSS</li>
+              </ul>
+              <a class="project__link" href="https://tarzau.netlify.app/" target="_blank" rel="noopener">
+                Explore the live app
+                <svg width="11" height="11" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M4 12L12 4M6 4h6v6" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/>
+                </svg>
+              </a>
+            </div>
+            <div class="project__aside">
+              <p class="label" style="margin-bottom:.6rem">What's inside</p>
+              <p class="project__desc">
+                Front-end only, so there's no server to wait on and nothing to log in to.
+                Built for a shop counter: one thumb, weak signal, no patience for loading states.
+              </p>
+            </div>
+          </div>
+          <figure class="project__figure">
+            <img src="assets/projects/tarazu.webp" width="1200" height="564" loading="lazy" decoding="async"
+                 alt="Tarazu home screen with the headline Welcome to Tarazu App, a green highlight, and cards reading 5+ Smart Tools, Free Always, No Signup, and Offline Works Anywhere">
+          </figure>
+          <p class="project__caption">
+            <span>Fig. 02 / Five tools, one screen</span>
+            <span>React · Tailwind</span>
+          </p>
+        </article>
+
+        <!-- 03 ClimaTek -->
+        <article class="project reveal">
+          <div class="project__head">
+            <p class="project__index">03 / Dashboard</p>
+            <div>
+              <h3 class="project__title">
+                <a href="https://climatek.netlify.app/" target="_blank" rel="noopener">
+                  ClimaTek <span class="up" aria-hidden="true">↗</span>
+                </a>
+              </h3>
+              <p class="project__desc" style="margin-top:1rem">
+                Weather intelligence rather than a single temperature. Search any city for current
+                conditions and a 24-hour forecast, plus humidity, wind, visibility, pressure,
+                UV index and air quality, with unit switching and geolocation.
+              </p>
+              <ul class="project__stack" aria-label="Tech stack">
+                <li class="chip">React</li>
+                <li class="chip">Weather API</li>
+                <li class="chip">Tailwind CSS</li>
+              </ul>
+              <a class="project__link" href="https://climatek.netlify.app/" target="_blank" rel="noopener">
+                Explore the live app
+                <svg width="11" height="11" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M4 12L12 4M6 4h6v6" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/>
+                </svg>
+              </a>
+            </div>
+            <div class="project__aside">
+              <p class="label" style="margin-bottom:.6rem">What's inside</p>
+              <p class="project__desc">
+                Live API data with its own loading and failure states, so a dropped request
+                reads as a message instead of a blank panel.
+              </p>
+            </div>
+          </div>
+          <figure class="project__figure">
+            <img src="assets/projects/climatek.webp" width="1200" height="561" loading="lazy" decoding="async"
+                 alt="ClimaTek dashboard showing 29 degrees Celsius in Mumbai with moderate rain, plus humidity, wind, visibility and pressure panels above a 24-hour forecast strip">
+          </figure>
+          <p class="project__caption">
+            <span>Fig. 03 / Mumbai, 29°C, moderate rain</span>
+            <span>React · Weather API</span>
+          </p>
+        </article>
+
+      </div>
+
+      <div class="work__more reveal">
+        <p>Source for these, and everything else I'm tinkering with, lives on GitHub.</p>
+        <a class="btn btn--ghost" href="https://github.com/pmharshuu" target="_blank" rel="noopener">
+          Browse the repos
+          <svg class="btn__arrow" width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M4 12L12 4M6 4h6v6" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       ABOUT — quote in the sticky left column, story on the right,
+       then the three skills lists.
+       ====================================================== -->
+  <section class="sec sec--band" id="about" aria-labelledby="about-title">
+    <div class="wrap">
+      <div class="sec__head reveal">
+        <p class="label"><span class="label__num">02</span> About</p>
+        <h2 class="sec__title" id="about-title">Self-taught, and already shipping.</h2>
+      </div>
+
+      <div class="about__grid">
+        <aside class="about__aside reveal">
+          <blockquote class="about__quote">
+            “I didn't wait for a course to finish before I
+            <span class="mark-line">started building.</span>”
+          </blockquote>
+          <p class="about__byline">Harsh, on how this started</p>
+        </aside>
+
+        <div class="about__body reveal">
+          <p>
+            I'm a BCA student in my first semester and a self-taught full-stack web developer.
+            I started out of curiosity, and instead of collecting tutorials I jumped straight
+            into real projects and worked out the missing pieces along the way.
+          </p>
+          <p>
+            Since then I've built and shipped several full-stack apps: movie discovery, weather
+            dashboards, small utilities, mostly with React, Node, Express and MongoDB. Each one
+            taught me something the previous one didn't. How to structure an API so it stays
+            readable. How to handle data that arrives late, or not at all. And how much of the
+            quality lives in the small interface decisions nobody is supposed to notice.
+          </p>
+          <p>
+            Formal computer science is only starting for me. I already know it's what I want to
+            keep doing, so I'd rather be useful now than wait until a degree says I am. If you
+            have something to build, or a codebase that needs a careful pair of hands, I'd like
+            to hear about it.
+          </p>
+
+          <div class="lists">
+            <div>
+              <h3>Building with</h3>
+              <ul class="stack-list">
+                <li>JavaScript &amp; TypeScript</li>
+                <li>React &amp; Next.js</li>
+                <li>Node.js &amp; Express</li>
+                <li>MongoDB &amp; MySQL</li>
+                <li>Tailwind CSS</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Currently learning</h3>
+              <ul class="stack-list">
+                <li>C++</li>
+                <li>Data structures &amp; algorithms</li>
+                <li>Python</li>
+                <li>Deeper Next.js</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Day to day</h3>
+              <ul class="stack-list">
+                <li>Git &amp; GitHub</li>
+                <li>Postman</li>
+                <li>VS Code</li>
+                <li>Vercel &amp; Netlify</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       CREDENTIALS — a rule-separated table, not a card grid.
+       ====================================================== -->
+  <section class="sec" id="credentials" aria-labelledby="creds-title">
+    <div class="wrap">
+      <div class="sec__head reveal">
+        <p class="label"><span class="label__num">03</span> Credentials</p>
+        <h2 class="sec__title" id="creds-title">What's been certified.</h2>
+        <p class="sec__note">Completed programmes, listed as they are. No badges, no scores.</p>
+      </div>
+
+      <div class="creds">
+        <article class="cred reveal">
+          <h3>MERN Stack Certified Developer</h3>
+          <p class="cred__by">BE-Practical Tech Solutions, Bangalore</p>
+          <p class="cred__meta">Full-stack</p>
+        </article>
+        <article class="cred reveal">
+          <h3>Responsive Web Design</h3>
+          <p class="cred__by">freeCodeCamp</p>
+          <p class="cred__meta">HTML · CSS · Grid</p>
+        </article>
+        <article class="cred reveal">
+          <h3>JavaScript Algorithms &amp; Data Structures</h3>
+          <p class="cred__by">freeCodeCamp</p>
+          <p class="cred__meta">JavaScript</p>
+        </article>
+        <article class="cred reveal">
+          <h3>React Native Development</h3>
+          <p class="cred__by">Coursera, Meta</p>
+          <p class="cred__meta">Mobile</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       CONTACT — the one dark band on the page. Email first,
+       the Tally form as the alternative, facts on the right.
+       ====================================================== -->
+  <section class="contact" id="contact" aria-labelledby="contact-title">
+    <div class="wrap">
+      <p class="label"><span class="label__num">04</span> Contact</p>
+      <h2 class="contact__title" id="contact-title">
+        Got something<br> worth building<span class="q" aria-hidden="true">?</span>
+      </h2>
+
+      <div class="contact__grid">
+        <div>
+          <p class="contact__lead">
+            An internship, a freelance build, or a project you're stuck on: send me the details.
+            I reply within a day, and I'll tell you honestly whether I'm the right person for it.
+          </p>
+          <a class="contact__email" href="mailto:harsh48227@gmail.com">harsh48227@gmail.com</a>
+
+          <div class="contact__actions">
+            <a class="btn btn--solid" href="mailto:harsh48227@gmail.com?subject=Project%20enquiry">
+              Start an email
+              <svg class="btn__arrow" width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/>
+              </svg>
+            </a>
+            <a class="btn btn--ghost" href="https://tally.so/r/QKpNqX" target="_blank" rel="noopener">
+              Use the form instead
+            </a>
+          </div>
+        </div>
+
+        <dl class="facts">
+          <div class="fact"><dt>Location</dt><dd>Faridabad, Haryana, IN</dd></div>
+          <div class="fact"><dt>Local time</dt><dd><time id="clock">IST</time></dd></div>
+          <div class="fact"><dt>Response</dt><dd>Within one day</dd></div>
+          <div class="fact"><dt>Status</dt><dd>Open to internships &amp; freelance</dd></div>
+          <div class="fact"><dt>Elsewhere</dt><dd><a href="https://github.com/pmharshuu" target="_blank" rel="noopener">GitHub</a></dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__inner">
+    <p>© <span id="year">2026</span> Harsh Upadhyay</p>
+    <p>Set in Gambetta, Switzer &amp; JetBrains Mono</p>
+    <p><a href="#top">Back to top ↑</a></p>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Harsh Upadhyay",
+  "jobTitle": "Full-Stack Web Developer",
+  "email": "mailto:harsh48227@gmail.com",
+  "address": { "@type": "PostalAddress", "addressLocality": "Faridabad", "addressRegion": "Haryana", "addressCountry": "IN" },
+  "knowsAbout": ["React", "Node.js", "Express", "MongoDB", "MySQL", "Tailwind CSS", "TypeScript", "Next.js"],
+  "sameAs": ["https://github.com/pmharshuu"]
+}
+</script>
+</body>
+</html>

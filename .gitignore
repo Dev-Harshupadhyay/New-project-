@@ -1,0 +1,11 @@
+# OS noise
+.DS_Store
+Thumbs.db
+
+# editor
+.vscode/
+.idea/
+
+# python cache from tools/build.py
+__pycache__/
+*.pyc
